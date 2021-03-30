@@ -1,3 +1,8 @@
+!INITIALIZE THE LIBRAARIES FIRST!
+import os.path
+from os import path
+path.exists("guru99.txt")
+
 import speech_recognition as sr
 import pyttsx3
 import pywhatkit
@@ -23,15 +28,20 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'alexa' in command:
-                command = command.replace('alexa', '')
+            if 'anna' in command:
+                command = command.replace('anna', '')
                 print(command)
     except:
         pass
     return command
 
+def greeting_anna()
+    talk('Hi, plaese hold on as I get everything ready')
+    talk('I s there anything I can help you with in the meantime?')
+    command = take_command()
+    if 
 
-def run_alexa():
+def run_anna():
     command = take_command()
     print(command)
     if 'play' in command:
@@ -57,4 +67,4 @@ def run_alexa():
 
 
 while True:
-    run_alexa()
+    run_anna()
